@@ -11,8 +11,9 @@
     <modules>
         <module>kafka-producer-wikimedia</module>
         <module>kafka-consumer-opensearch</module>
-        <module>kafka-stream-wikimedia</module>
         <module>kafka-multiThread-producer</module>
+        <module>kafka-hello-stream</module>
+        <module>pos-simulator</module>
     </modules>
 
     <properties>
