@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import types.DeliveryAddress;
-import types.PosInvoice;
 import types.LineItem;
+import types.PosInvoice;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class InvoiceGenerator {
     }
 
     private InvoiceGenerator() {
-        String DATAFILE = "pos-simulator/src/main/resources/data/Invoice.json";
+        String DATAFILE = "src/main/resources/data/Invoice.json";
         ObjectMapper mapper;
         invoiceIndex = new Random();
         invoiceNumber = new Random();

@@ -1,0 +1,1 @@
+docker exec -it kafka1 kafka-console-consumer --bootstrap-server kafka1:19092 --topic loyalty --from-beginning

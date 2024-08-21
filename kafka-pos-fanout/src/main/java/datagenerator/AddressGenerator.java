@@ -3,7 +3,6 @@ package datagenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import types.DeliveryAddress;
 
-
 import java.io.File;
 import java.util.Random;
 
@@ -22,7 +21,7 @@ class AddressGenerator {
     }
 
     private AddressGenerator() {
-        final String DATAFILE = "pos-simulator/src/main/resources/data/address.json";
+        final String DATAFILE = "src/main/resources/data/address.json";
         final ObjectMapper mapper;
         random = new Random();
         mapper = new ObjectMapper();
