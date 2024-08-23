@@ -17,6 +17,7 @@
         <module>kafka-pos-fanout</module>
         <module>arvo-to-pojo</module>
         <module>pos-simulator-avro</module>
+        <module>pos-fanout-avro</module>
     </modules>
 
     <properties>
