@@ -2,6 +2,7 @@
 package datagenerator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import types.LineItem;
 
 import java.io.File;
@@ -20,6 +21,7 @@ class ProductGenerator {
     private ProductGenerator() {
         String DATAFILE = "pos-simulator-avro/src/main/resources/data/products.json";
         ObjectMapper mapper = new ObjectMapper();
+        mapper.setPropertyNamingStrategy(PropertyNamingStrategy.UPPER_CAMEL_CASE);
         random = new Random();
         qty = new Random();
         try {

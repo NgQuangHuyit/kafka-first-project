@@ -21,6 +21,7 @@ public class RunnableProducer implements Runnable {
         this.producer = producer;
         this.topicName = topicName;
         this.produceSpeed = produceSpeed;
+
         this.invoiceGenerator = InvoiceGenerator.getInstance();
     }
     @Override
@@ -30,6 +31,7 @@ public class RunnableProducer implements Runnable {
             while (!stopper.get()) {
                 logger.info("---------");
                 PosInvoice posInvoice = invoiceGenerator.getNextInvoice();
+                logger.info("***************");
                 logger.info(posInvoice.toString());
                 producer.send(new ProducerRecord<>(topicName, posInvoice.getStoreID().toString(), posInvoice));
                 logger.info("Thread" + id + "sent");

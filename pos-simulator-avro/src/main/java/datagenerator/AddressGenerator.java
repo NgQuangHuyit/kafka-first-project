@@ -1,6 +1,7 @@
 package datagenerator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import types.DeliveryAddress;
 
 import java.io.File;
@@ -25,6 +26,7 @@ class AddressGenerator {
         final ObjectMapper mapper;
         random = new Random();
         mapper = new ObjectMapper();
+        mapper.setPropertyNamingStrategy(PropertyNamingStrategy.UPPER_CAMEL_CASE);
         
         try {
             addresses = mapper.readValue(new File(DATAFILE), DeliveryAddress[].class);
