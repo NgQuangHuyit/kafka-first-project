@@ -15,6 +15,7 @@
         <module>kafka-hello-stream</module>
         <module>pos-simulator</module>
         <module>kafka-pos-fanout</module>
+        <module>arvo-to-pojo</module>
     </modules>
 
     <properties>
