@@ -5,7 +5,6 @@
  */
 package types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -73,20 +72,15 @@ public class PosInvoice extends org.apache.avro.specific.SpecificRecordBase impl
     return DECODER.decode(b);
   }
 
-  @JsonProperty("InvoiceNumber")
   private java.lang.CharSequence InvoiceNumber;
-  @JsonProperty("CreatedTime")
   private java.lang.Long CreatedTime;
   private java.lang.CharSequence CustomerCardNo;
   private java.lang.Double TotalAmount;
   private java.lang.Integer NumberOfItems;
   private java.lang.CharSequence PaymentMethod;
   private java.lang.Double TaxableAmount;
-  @JsonProperty("CGST")
   private java.lang.Double CGST;
-  @JsonProperty("SGST")
   private java.lang.Double SGST;
-  @JsonProperty("CESS")
   private java.lang.Double CESS;
   private java.lang.CharSequence StoreID;
   private java.lang.CharSequence PosID;
